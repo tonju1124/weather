@@ -110,7 +110,14 @@ html {
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
-    background-color: #ffffff;
+    width: 9.375rem;
+    height: 7.50731rem;
+}
+
+.weather-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 9.375rem;
     height: 7.50731rem;
 }
