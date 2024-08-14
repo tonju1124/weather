@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+/*font-family: 'Inria Serif', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+/*font-family: 'Jua', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/*font-family: 'Inter', sans-serif; */
+
 body,
 html {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: #969696;
+    font-family: 'Inria Serif', serif;
+    background-color: #1F1F1F;
     overflow-x: hidden;
 }
 
@@ -17,28 +24,62 @@ html {
 .card {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    background-color: rgb(99, 134, 222);
-    border-radius: 10px;
+    border-radius: 15px;
+    background: #C4EDF0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    margin-top: 8vh;
-    width: 80vh;
-    height: 80vh;
+    margin-top: 4rem;
+    width: 31.25rem;
+    height: 44.375rem;
+    margin-bottom: 4rem;
 }
 
-.weather-icon {
-    border: 2px solid rgb(147, 169, 225);
-    border-radius: 2rem;
-    padding: 10rem;
-    margin: 1rem;
-}
-
-
-
-#content {
+.search-box {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1.5rem;
+}
+
+.search-bar {
+    width: 20.625rem;
+    height: 3.125rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    background: #E6FEFF;
+    border: 1px solid #ffffff;
+    transition: ease-in-out 0.3s;
+    border-radius: 6rem;
+    padding-left: 2rem;
+}
+
+.search-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background: #E6FEFF;
+    border-radius: 100%;
+    border: 1px solid#ffffff;
+    transition: ease-in-out 0.3s;
+}
+
+.search-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+}
+
+.search-button:hover {
+    background: #bacdcd;
+    border: 1px solid #9BB9BA;
+}
+
+.search-bar:focus {
+    outline: none;
+    border: 1px solid #9BB9BA;
 }

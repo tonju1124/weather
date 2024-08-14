@@ -1,8 +1,10 @@
 import "./index.css";
 
-fetch(`https://api.openweathermap.org/data/2.5/weather?q=Banting&appid=${process.env.API_KEY}&units=metric`)
+const apiKey = import.meta.env.VITE_API_KEY
+
+fetch(`https://api.openweathermap.org/data/2.5/weather?q=Banting&appid=${apiKey}&unit=metric`)
     .then(response => response.json())
-    .then(data => {
+    .then(data => { 
         console.log(data);
     })
     .catch(error => {
