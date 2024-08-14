@@ -83,3 +83,108 @@ html {
     outline: none;
     border: 1px solid #9BB9BA;
 }
+
+.weather-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #D9F3F5;
+    border-radius: 0.9375rem;
+    margin-top: 2rem;
+    width: 27.8rem;
+    height: 18.75rem;
+}
+
+.location {
+    color: #000;
+    font-family: Inter;
+    font-size: 1.5625rem;
+    font-style: normal;
+    font-weight: 700;
+    opacity: none;
+}
+
+.weather-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    background-color: #ffffff;
+    width: 9.375rem;
+    height: 7.50731rem;
+}
+
+.weather-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.time-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.time {
+    color: #000;
+    font-family: Jua;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.hour {
+    color: #000;
+    font-family: "Inria Serif";
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.temperature-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.temperature {
+    color: #000;
+    font-family: Jua;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.temp-readings {
+    color: #000;
+    font-family: "Inria Serif";
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.weather {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 4.875rem;
+    height: 3.375rem;
+    color: #000;
+    text-align: center;
+    font-family: Jua;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
