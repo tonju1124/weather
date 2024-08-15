@@ -36,6 +36,13 @@ searchBtn.addEventListener('click', () => {
             weatherDescription.textContent =  capitalizeFirstLetter(data.weather[0].description);
             windReading.textContent = data.wind.speed + ' m/s';
             humidityReading.textContent = data.main.humidity + ' %';
+            const hours = new Date(Date.now() + timezoneOffset * 1000).getUTCHours();
+            const isNight = hours >= 20 || hours < 7;
+            const iconPrefix = isNight ? 'night' : 'day';
+                weatherImg.src = `svg/${iconPrefix}-${data.weather[0].icon}.svg`;
+                weatherImg.alt = data.weather[0].description;
+
+
         })
         .catch(error => {
             console.error('Error fetching the weather data:', error);
@@ -45,6 +52,5 @@ searchBtn.addEventListener('click', () => {
     }
 });
 
-
-    weatherImg.src = 'svg/sun-w-clouds.svg';
-    weatherImg.alt = 'Sun with clouds';
+weatherImg.src = 'svg/day-01d.svg';
+weatherImg.alt = 'Sun with clouds';
