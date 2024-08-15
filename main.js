@@ -68,6 +68,7 @@ function fetchWeatherData(location) {
             console.error('Error fetching the weather data:', error);
             locationElement.textContent = 'Location not found';
             timeElement.textContent = '--:--';
+            temperatureElement.textContent = '--°C';
             weatherDescription.textContent = '-';
             windReading.textContent = '-';
             humidityReading.textContent = '-';
