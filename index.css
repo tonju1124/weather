@@ -14,6 +14,15 @@ html {
     overflow-x: hidden;
 }
 
+img {
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+
+}
+
 .main-container {
     display: flex;
     justify-content: center;
@@ -28,10 +37,8 @@ html {
     border-radius: 15px;
     background: #C4EDF0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 3.2rem 3rem;
     margin-top: 4rem;
-    width: 31.25rem;
-    height: 44.375rem;
     margin-bottom: 4rem;
 }
 
@@ -39,7 +46,6 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
     gap: 1.5rem;
 }
 
@@ -199,9 +205,8 @@ html {
 .other-details {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
+    gap: 3.81rem;
+    margin-top: 3rem;
 }
 
 .wind {
@@ -232,7 +237,6 @@ html {
     font-size: 0.9375rem;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
     margin-top: 0.94rem;
 }
 
@@ -242,5 +246,43 @@ html {
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 700;
-    line-height: normal;
+}
+
+.humidity {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.humidity-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #D9F3F5;
+    width: 5.3125rem;
+    height: 7.5rem;
+    border-radius: 0.625rem;
+}
+
+.humidity img {
+    width: 6.25rem;
+    height: 6.48344rem;
+}
+
+.humidity-level {
+    color: #000;
+    font-family: Jua;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 0.94rem;
+}
+
+.humidity-percentage {
+    color: #000;
+    font-family: "Inria Serif";
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
 }
