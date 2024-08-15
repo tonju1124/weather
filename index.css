@@ -35,7 +35,7 @@ img {
     flex-direction: column;
     align-items: center;
     border-radius: 15px;
-    background: #C4EDF0;
+    background: #5B5B5B;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 3.2rem 3rem;
     margin-top: 4rem;
@@ -54,8 +54,8 @@ img {
     height: 3.125rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    background: #E6FEFF;
-    border: 1px solid #ffffff;
+    background: #AAAAAA;
+    border: 1px solid #808080;
     transition: ease-in-out 0.3s;
     border-radius: 6rem;
     padding-left: 2rem;
@@ -67,9 +67,9 @@ img {
     align-items: center;
     width: 50px;
     height: 50px;
-    background: #E6FEFF;
+    background: #AAAAAA;
     border-radius: 100%;
-    border: 1px solid#ffffff;
+    border: 1px solid#808080;
     transition: ease-in-out 0.3s;
 }
 
@@ -81,13 +81,13 @@ img {
 }
 
 .search-button:hover {
-    background: #bacdcd;
-    border: 1px solid #9BB9BA;
+    background: #808080;
+    border: 1px solid #ffffff;
 }
 
 .search-bar:focus {
     outline: none;
-    border: 1px solid #9BB9BA;
+    border: 1px solid #ffffff;
 }
 
 .weather-box {
@@ -95,7 +95,7 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #D9F3F5;
+    background-color: #949494;
     border-radius: 0.9375rem;
     margin-top: 2rem;
     width: 27.8rem;
@@ -220,7 +220,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #D9F3F5;
+    background: #949494;
     border-radius: 0.625rem;
     width: 10rem;
     height: 7.5rem;
@@ -259,7 +259,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #D9F3F5;
+    background: #949494;
     width: 5.3125rem;
     height: 7.5rem;
     border-radius: 0.625rem;

@@ -11,6 +11,26 @@ const weatherDescription = document.querySelector('.weather');
 const windReading = document.querySelector(".wind-speed-reading")
 const humidityReading = document.querySelector(".humidity-percentage")
 
+searchBtn.addEventListener('click', () => {
+    const location = searchBar.value;
+    if (location) {
+        fetchWeatherData(location);
+    } else {
+        alert('Location not found');
+    }
+});
+
+searchBar.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        const location = searchBar.value;
+        if (location) {
+            fetchWeatherData(location);
+        } else {
+            alert('Location not found');
+        }
+    }
+});
+
 
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -22,9 +42,7 @@ function getLocalTime(timezoneOffset) {
     return localTime.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', hour12: false });
 }
 
-searchBtn.addEventListener('click', () => {
-    const location = searchBar.value.trim();
-    if(location) {
+function fetchWeatherData(location) {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}&unit=metric`)
         .then(response => response.json())
         .then(data => {
@@ -33,24 +51,21 @@ searchBtn.addEventListener('click', () => {
             const timezoneOffset = data.timezone;
             timeElement.textContent = getLocalTime(timezoneOffset);
             temperatureElement.textContent = Math.round(data.main.temp - 273.15) + '°C';
-            weatherDescription.textContent =  capitalizeFirstLetter(data.weather[0].description);
+            weatherDescription.textContent = capitalizeFirstLetter(data.weather[0].description);
             windReading.textContent = data.wind.speed + ' m/s';
             humidityReading.textContent = data.main.humidity + ' %';
             const hours = new Date(Date.now() + timezoneOffset * 1000).getUTCHours();
             const isNight = hours >= 20 || hours < 7;
             const iconPrefix = isNight ? 'night' : 'day';
-                weatherImg.src = `svg/${iconPrefix}-${data.weather[0].icon}.svg`;
-                weatherImg.alt = data.weather[0].description;
+            weatherImg.src = `svg/${iconPrefix}-${data.weather[0].icon}.svg`;
+            weatherImg.alt = data.weather[0].description;
 
 
         })
         .catch(error => {
             console.error('Error fetching the weather data:', error);
         });
-    } else {
-        alert('Location not found');
-    }
-});
+}
 
 weatherImg.src = 'svg/day-01d.svg';
 weatherImg.alt = 'Sun with clouds';
