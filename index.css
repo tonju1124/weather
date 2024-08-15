@@ -20,7 +20,6 @@ img {
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-
 }
 
 .main-container {
@@ -69,7 +68,7 @@ img {
     height: 50px;
     background: #AAAAAA;
     border-radius: 100%;
-    border: 1px solid#808080;
+    border: 1px solid #808080;
     transition: ease-in-out 0.3s;
 }
 
@@ -285,4 +284,136 @@ img {
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: 2rem 1.5rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .search-bar {
+        width: 15rem;
+        height: 2.5rem;
+        font-size: 0.875rem;
+    }
+
+    .search-button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .weather-box {
+        width: 20rem;
+        height: 15rem;
+    }
+
+    .location {
+        font-size: 1.25rem;
+    }
+
+    .weather-img,
+    .weather-icon {
+        width: 7rem;
+        height: 5.5rem;
+    }
+
+    .time,
+    .temperature,
+    .weather,
+    .wind-speed,
+    .humidity-level {
+        font-size: 0.75rem;
+    }
+
+    .hour,
+    .temp-readings,
+    .wind-speed-reading,
+    .humidity-percentage {
+        font-size: 1rem;
+    }
+
+    .other-details {
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .wind-img,
+    .humidity-img {
+        width: 8rem;
+        height: 6rem;
+    }
+
+    .wind img,
+    .humidity img {
+        width: 7rem;
+        height: 5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 1.5rem 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .search-bar {
+        width: 12rem;
+        height: 2rem;
+        font-size: 0.75rem;
+    }
+
+    .search-button {
+        width: 30px;
+        height: 30px;
+    }
+
+    .weather-box {
+        width: 15rem;
+        height: 12rem;
+    }
+
+    .location {
+        font-size: 1rem;
+    }
+
+    .weather-img,
+    .weather-icon {
+        width: 5rem;
+        height: 4rem;
+    }
+
+    .time,
+    .temperature,
+    .weather,
+    .wind-speed,
+    .humidity-level {
+        font-size: 0.625rem;
+    }
+
+    .hour,
+    .temp-readings,
+    .wind-speed-reading,
+    .humidity-percentage {
+        font-size: 0.875rem;
+    }
+
+    .other-details {
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .wind-img,
+    .humidity-img {
+        width: 6rem;
+        height: 4.5rem;
+    }
+
+    .wind img,
+    .humidity img {
+        width: 5rem;
+        height: 3.5rem;
+    }
 }
