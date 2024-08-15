@@ -10,7 +10,7 @@ html {
     margin: 0;
     padding: 0;
     font-family: 'Inria Serif', serif;
-    background-color: #1F1F1F;
+    background: linear-gradient(117deg, #5e5e5e 0%, #000000 100%);
     overflow-x: hidden;
 }
 
@@ -20,6 +20,7 @@ img {
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+    transition: ease-in-out 0.5s;
 }
 
 .weather-icon {
@@ -29,6 +30,7 @@ img {
     -webkit-user-select: none;
     -ms-user-select: none;
 }
+
 
 .main-container {
     display: flex;
@@ -41,6 +43,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 2px solid #000000;
     border-radius: 15px;
     background: #5B5B5B;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -127,6 +130,10 @@ img {
     margin-top: 1rem;
     width: 9.375rem;
     height: 7.50731rem;
+}
+
+img:hover {
+    transform: scale(1.1);
 }
 
 .weather-icon {
@@ -231,8 +238,8 @@ img {
     align-items: center;
     background: #949494;
     border-radius: 0.625rem;
-    width: 10rem;
-    height: 7.5rem;
+    width: 11rem;
+    height: 8rem;
 }
 
 .wind img {
@@ -269,8 +276,8 @@ img {
     justify-content: center;
     align-items: center;
     background: #949494;
-    width: 5.3125rem;
-    height: 7.5rem;
+    width: 6rem;
+    height: 8rem;
     border-radius: 0.625rem;
 }
 
