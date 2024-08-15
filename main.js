@@ -17,8 +17,9 @@ function capitalizeFirstLetter(string) {
 }
 
 function getLocalTime(timezoneOffset) {
-    const localTime = new Date(Date.now() + timezoneOffset * 1000);
-    return localTime.toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
+    const utcTime = new Date().getTime() + new Date().getTimezoneOffset() * 60000;
+    const localTime = new Date(utcTime + timezoneOffset * 1000);
+    return localTime.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', hour12: false });
 }
 
 searchBtn.addEventListener('click', () => {
@@ -29,7 +30,8 @@ searchBtn.addEventListener('click', () => {
         .then(data => {
             console.log(data);
             locationElement.textContent = data.name;
-            timeElement.textContent = getLocalTime(data.timezone);
+            const timezoneOffset = data.timezone;
+            timeElement.textContent = getLocalTime(timezoneOffset);
             temperatureElement.textContent = Math.round(data.main.temp - 273.15) + '°C';
             weatherDescription.textContent =  capitalizeFirstLetter(data.weather[0].description);
             windReading.textContent = data.wind.speed + ' m/s';
