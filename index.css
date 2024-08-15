@@ -22,6 +22,14 @@ img {
     -ms-user-select: none;
 }
 
+.weather-icon {
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
 .main-container {
     display: flex;
     justify-content: center;
@@ -70,6 +78,7 @@ img {
     border-radius: 100%;
     border: 1px solid #808080;
     transition: ease-in-out 0.3s;
+    cursor: pointer;
 }
 
 .search-img {
@@ -82,6 +91,7 @@ img {
 .search-button:hover {
     background: #808080;
     border: 1px solid #ffffff;
+    cursor: pointer;
 }
 
 .search-bar:focus {
