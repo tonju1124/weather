@@ -25,6 +25,7 @@ searchBar.addEventListener('keydown', (event) => {
         const location = searchBar.value;
         if (location) {
             fetchWeatherData(location);
+            searchBar.value = '';
         } else {
             alert('Location not found');
         }
@@ -63,7 +64,15 @@ function fetchWeatherData(location) {
 
         })
         .catch(error => {
+            alert("Location not found");
             console.error('Error fetching the weather data:', error);
+            locationElement.textContent = 'Location not found';
+            timeElement.textContent = '--:--';
+            weatherDescription.textContent = '-';
+            windReading.textContent = '-';
+            humidityReading.textContent = '-';
+            weatherImg.src = 'svg/azusa.svg';
+            weatherImg.alt = 'ᓀ‸ᓂ';
         });
 }
 
