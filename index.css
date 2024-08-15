@@ -195,3 +195,52 @@ html {
     font-weight: 400;
     line-height: normal;
 }
+
+.other-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.wind {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wind-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #D9F3F5;
+    border-radius: 0.625rem;
+    width: 10rem;
+    height: 7.5rem;
+}
+
+.wind img {
+    width: 9.37506rem;
+    height: 6.01875rem;
+}
+
+.wind-speed {
+    color: #000;
+    font-family: Jua;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 0.94rem;
+}
+
+.wind-speed-reading {
+    color: #000;
+    font-family: "Inria Serif";
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
